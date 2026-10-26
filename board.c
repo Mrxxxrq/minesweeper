@@ -1,5 +1,7 @@
 #include"board.h"
 #include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
 void displayboard(char board[ROWS][COLS],int r,int c)
 {
    int i = 0;
@@ -45,5 +47,11 @@ void initboard(char board[ROWS][COLS],int r,int c,char set)
 
 void setmine(char board[ROWS][COLS],int r,int c)
 {
-    
+    srand((unsigned int)time(NULL));
+    for(int i = 0;i<10;i++)
+    {
+        int x = rand()%c+1;
+        int y = rand()%r+1;
+        board[y][x] = '1';
+    }
 }

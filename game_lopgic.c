@@ -22,6 +22,9 @@ void game()
     //打印棋盘
     displayboard(show,ROW,COL);
     //布置雷
+    setmine(mine,ROW,COL);
+    displayboard(mine,ROW,COL);//记得等会注释掉
+    
 }
 //需要函数来初始化棋盘
 
